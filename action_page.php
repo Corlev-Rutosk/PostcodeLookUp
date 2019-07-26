@@ -23,24 +23,10 @@ curl_close($curlcon);
    
 $output2 = explode(',',$output);
 
-echo print_r($output2[0]);
-echo '<br>';
-echo print_r($output2[1]);
-echo '<br>';
-echo print_r($output2[2]);
-echo '<br>';
-echo print_r($output2[3]);
-echo '<br>';
-echo print_r($output2[4]);
-echo '<br>';
-echo print_r($output2[5]);
-echo '<br>';
-echo print_r($output2[6]);
-echo '<br>';
-echo print_r($output2[7]);
-echo '<br>';
-echo print_r($output2[8]);
-echo '<br>';
+
+for($x=0; $x <=32; $x++) {
+    echo print_r($output2[$x]), '<br>';
+} 
 
 
 ?>
