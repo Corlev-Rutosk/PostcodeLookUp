@@ -29,9 +29,25 @@ for($x=0; $x <=32; $x++) {
 } 
 
 
+$longitude = json_encode($output2[7]);
+echo $longitude;
+    
+$latitude = json_encode($output2[8]);
+echo $latitude;
+
+
 ?>
 
 
+<script>
+ 
+let longitude = <?php echo $longitude ?>;
+alert(longitude);
+
+let latitude = <?php echo $latitude ?>;
+alert(latitude);
+
+</script>
 
 </body>
 </html>
