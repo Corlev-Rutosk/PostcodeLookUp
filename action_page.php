@@ -1,26 +1,24 @@
 <html>
 <body>
 
-The postcode is 
-<?php echo $_GET['postcode']; ?> <br> <br>
 
-<?php
+<?php $postcode = $_GET['postcode'];
 
-
-// initialise session
+// Initialise session
 $curlcon = curl_init();
 
-// set options
-curl_setopt($curlcon,CURLOPT_URL,"http://postcodes.io/postcodes/ng243ng");
+// Set options
+curl_setopt($curlcon,CURLOPT_URL,"http://postcodes.io/postcodes/$postcode");
 curl_setopt($curlcon,CURLOPT_RETURNTRANSFER,true);
 curl_setopt($curlcon,CURLOPT_HEADER,false); 
 
+// Fetch data
 $output=curl_exec($curlcon);
 
+// Close session
 curl_close($curlcon);
 
 echo $output;
-
 
 
 ?>
